@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700');
+
+// Set your brand colors
+// $nice-blue: #006cff;
+// $pink: #FF0E68;
+// $brown: #757763;
+// $beige-light: #D0D1CD;
+// $beige-lighter: #EFF0EB;
+
+// Update Bulma's global variables
+$family-sans-serif: "Lato", sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $nice-blue;
+// $link: $nice-blue;
+$widescreen-enabled: true;
+$fullhd-enabled: true;
+
+// Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "~bulma/bulma.sass";
