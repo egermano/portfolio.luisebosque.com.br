@@ -13,7 +13,7 @@
 // $beige-lighter: #EFF0EB;
 
 // Update Bulma's global variables
-$family-sans-serif: "Lato", sans-serif;
+$family-sans-serif: 'Lato', sans-serif;
 // $grey-dark: $brown;
 // $grey-light: $beige-light;
 // $primary: $nice-blue;
@@ -28,4 +28,74 @@ $input-border-color: transparent;
 $input-shadow: none;
 
 // Import only what you need from Bulma
-@import "~bulma/bulma.sass";
+@import '~bulma/bulma.sass';
+
+.projects {
+  &.section {
+    padding: 3rem 0;
+  }
+  .project {
+    background: $black;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      .cover {
+        opacity: 1;
+        transform: scale(1.2);
+        transition: opacity 0.6s ease-in-out, transform 10s ease-in-out;
+      }
+    }
+
+    &.is-3 {
+      width: 100%;
+      padding-bottom: 100%;
+
+      @include tablet() {
+        width: 25%;
+        padding-bottom: 25%;
+      }
+
+      @include desktop() {
+        width: 25%;
+        padding-bottom: 25%;
+      }
+    }
+
+    &.is-6 {
+      width: 100%;
+      padding-bottom: 100%;
+
+      @include tablet() {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+
+      @include desktop() {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+    }
+
+    .cover {
+      opacity: 0.85;
+      position: absolute !important;
+      top: 0;
+      min-height: 100%;
+      min-width: 100%;
+      transform: scale(1);
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+
+    .title {
+      color: $white;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
