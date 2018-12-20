@@ -38,13 +38,12 @@ const Portfolio = () => (
         slot++
       })
 
-      return <section className="section projects is-clearfix">
+      return (
+        <section className="section projects is-clearfix">
           {projects.map((project, i) => (
             <a
               key={`project-${i}`}
-              className={`project ${
-                i % 3 == 0 || i === 0 ? 'is-6' : 'is-3'
-              }`}
+              className={`project ${i % 3 == 0 || i === 0 ? 'is-6' : 'is-3'}`}
               href={project.frontmatter.path}
             >
               <ProjectCover path={project.frontmatter.cover} />
@@ -54,6 +53,7 @@ const Portfolio = () => (
             </a>
           ))}
         </section>
+      )
     }}
   />
 )

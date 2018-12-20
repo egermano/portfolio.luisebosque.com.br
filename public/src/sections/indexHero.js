@@ -8,7 +8,7 @@ const Hero = () => (
       query {
         placeholderImage: file(relativePath: { eq: "images/lb-logo.png" }) {
           childImageSharp {
-            fluid(maxWidth: 600) {
+            fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid_noBase64
             }
           }
@@ -25,14 +25,18 @@ const Hero = () => (
                   fluid={data.placeholderImage.childImageSharp.fluid}
                   title="Luise Bosquê"
                   style={{
-                    maxWidth: '300px',
+                    maxWidth: '400px',
                     margin: '0 auto',
                   }}
                 />
               </h1>
-              <h2 className="subtitle has-text-centered">
-                Estilista, personal stylist, blogueira e criativa.
-              </h2>
+              <div className="columns">
+              <div className="column is-8 is-offset-4">
+                    <p className="hero-subtitle">
+                  Desenvolvendo produtos do <strong>início ao fim</strong>. Consultoria, criação modelagem, confecção e marketing.
+                  </p>
+                  </div>
+              </div>
             </div>
           </div>
         </section>

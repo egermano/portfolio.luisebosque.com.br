@@ -1,9 +1,8 @@
 @charset "utf-8";
 
 // Import a Google Font
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,900');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
 
 // Set your brand colors
 // $nice-blue: #006cff;
@@ -30,6 +29,12 @@ $input-shadow: none;
 // Import only what you need from Bulma
 @import '~bulma/bulma.sass';
 
+.hero-subtitle {
+  color: $black;
+  font-family: 'Playfair Display';
+  font-size: 3.5rem;
+  line-height: 1em;
+}
 .projects {
   &.section {
     padding: 3rem 0;
@@ -43,12 +48,12 @@ $input-shadow: none;
 
     &:hover {
       .cover {
-        opacity: .35;
+        opacity: 0.35;
         transform: scale(1.2);
         transition: opacity 0.6s ease-in-out, transform 10s ease-in-out;
       }
       .title {
-          opacity: 1;
+        opacity: 1;
       }
     }
 
@@ -91,21 +96,49 @@ $input-shadow: none;
       transform: scale(1);
       transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
     }
-    
+
     .title {
-        color: $white;
-        font-family: 'Open Sans';
-        font-weight: 700;
-        font-size: 1.5rem;
-        left: 0;
-        opacity: 0;
-        padding: 0 1.5rem;
-        position: absolute;
-        right: 0;
-        text-transform: uppercase;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: opacity 0.6s ease-in-out;
+      color: $white;
+      font-family: 'Playfair Display';
+      font-weight: 700;
+      font-size: 1.5rem;
+      left: 0;
+      opacity: 0;
+      padding: 0 1.5rem;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity 0.6s ease-in-out;
+    }
+  }
+}
+
+.project-page {
+  .project-container {
+    .project-pictures {
+      width: 70%;
+      float: left;
+    }
+    .project-content {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      float: right;
+      padding: 3rem 1.5rem;
+
+      .title {
+        font-family: 'Playfair Display';
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+    }
+    .project-picture {
+      width: 100%;
     }
   }
 }

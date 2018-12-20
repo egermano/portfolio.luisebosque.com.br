@@ -23,6 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              folder
             }
           }
         }
@@ -37,7 +38,9 @@ exports.createPages = ({ actions, graphql }) => {
                 createPage({
                     path: node.frontmatter.path,
                     component: projectsLayout,
-                    context: {}, // additional data can be passed via context
+                    context: {
+                      folder: node.frontmatter.folder
+                    }, // additional data can be passed via context
                 })
             })
         })
