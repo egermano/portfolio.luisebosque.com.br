@@ -1,7 +1,5 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { chunk } from 'lodash'
-import Img from 'gatsby-image'
 import ProjectCover from '../components/projectCover'
 
 const Portfolio = () => (
@@ -24,27 +22,28 @@ const Portfolio = () => (
       }
     `}
     render={data => {
-      const projects = data.allMarkdownRemark.edges.map(i => i.node)
-      let slot = 0
-      let chuckedProjects = []
+      let projects = data.allMarkdownRemark.edges.map(i => i.node)
+      let orientation = 'left'
 
-      projects.forEach(c => {
-        slot = slot >= 3 ? 0 : slot
-        if (chuckedProjects[slot]) {
-          chuckedProjects[slot].push(c)
-        } else {
-          chuckedProjects[slot] = [c]
+      projects = projects.map((project, i) => {
+        if (i > 0 && i % 3 === 0) {
+          orientation = orientation === 'left' ? 'right' : 'left';
         }
-        slot++
-      })
+        project.orientation = orientation;
+        return project;
+      }); 
 
-      return (
-        <section className="section projects is-clearfix">
+      return <section className="section projects is-clearfix">
           {projects.map((project, i) => (
             <a
               key={`project-${i}`}
-              className={`project ${i % 3 == 0 || i === 0 ? 'is-6' : 'is-3'}`}
+              className={`project ${
+                i % 3 === 0 || i === 0 ? 'is-6' : 'is-3'
+              }`}
               href={project.frontmatter.path}
+              style={{
+                float: project.orientation,
+              }}
             >
               <ProjectCover path={project.frontmatter.cover} />
               <p className="title has-text-centered">
@@ -52,8 +51,15 @@ const Portfolio = () => (
               </p>
             </a>
           ))}
+        <a key="project-sobre" 
+             className={`project ${projects.length % 3 === 0 ? 'is-6' : 'is-3'}`} 
+             href="/sobre">
+            <ProjectCover path="images/projects/sobre/perfil.jpg" />
+            <p className="title has-text-centered">
+              Sobre
+            </p>
+          </a>
         </section>
-      )
     }}
   />
 )

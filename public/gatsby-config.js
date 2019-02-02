@@ -1,7 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: 'Luise Bosquê',
-    description: 'TODO: descrição',
+    description: 'Desenvolvendo produtos do início ao fim. Consultoria, criação modelagem, confecção e marketing.',
+    keywords: [
+      'Luise Bosquê',
+      'Estilista',
+      'Personal Stylist',
+      'Vestidos Especiais',
+      'Vestido para festa',
+    ],
     author: 'Bruno Germano <bruno@egermano.com>',
   },
   plugins: [

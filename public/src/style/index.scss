@@ -32,9 +32,19 @@ $input-shadow: none;
 .hero-subtitle {
   color: $black;
   font-family: 'Playfair Display';
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   line-height: 1em;
+
+  @include tablet {
+    font-size: 3.5rem;
+  }
 }
+
+a {
+  color: $black;
+  text-decoration: underline;
+}
+
 .projects {
   &.section {
     padding: 3rem 0;
@@ -42,7 +52,6 @@ $input-shadow: none;
   .project {
     background: $black;
     display: block;
-    float: left;
     position: relative;
     overflow: hidden;
 
@@ -115,19 +124,49 @@ $input-shadow: none;
 }
 
 .project-page {
+  .logo-nav {
+    position: absolute;
+    left: 3rem;
+    top: 15px;
+    z-index: 99;
+
+    @include tablet {
+      position: fixed;
+      left: 30px;
+      top: 30px;
+      width: 150px;
+      height: 65px;
+    }
+
+    .logo-text {
+      i {
+        position: absolute;
+        top: 4px;
+        left: -16px;
+      }
+    }
+  }
+
   .project-container {
     .project-pictures {
-      width: 70%;
-      float: left;
+      @include tablet {
+        float: left;
+        width: 60%;
+      }
     }
     .project-content {
-      position: fixed;
       top: 0;
       bottom: 0;
       right: 0;
-      width: 30%;
+      width: 100%;
       float: right;
-      padding: 3rem 1.5rem;
+      padding: 5rem 3rem 3rem;
+
+      @include tablet {
+        position: fixed;
+        width: 40%;
+        padding: 3rem 1.5rem;
+      }
 
       .title {
         font-family: 'Playfair Display';
@@ -140,5 +179,26 @@ $input-shadow: none;
     .project-picture {
       width: 100%;
     }
+  }
+}
+
+.about-image {
+  margin: 0 auto 30px;
+  max-width: 550px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+}
+
+.about-page {
+  padding: 3rem 1.5rem;
+
+  .title {
+    font-family: 'Playfair Display';
+  }
+
+  p {
+    margin-bottom: 1em;
   }
 }

@@ -35,7 +35,7 @@ const ProjectCover = ({ path }) => (
     `}
     render={data => {
       const cover = data.allFile.edges.find(f => {
-        return f.node.relativePath == path
+        return f.node.relativePath === path
       })
 
         return <Img fluid={cover.node.childImageSharp.fluid} className="cover" style={{minHeight: '100%'}} />
