@@ -38,7 +38,13 @@ const ProjectCover = ({ path }) => (
         return f.node.relativePath === path
       })
 
-        return <Img fluid={cover.node.childImageSharp.fluid} className="cover" style={{minHeight: '100%'}} />
+      return (
+        <Img
+          fluid={cover.node.childImageSharp.fluid}
+          className="cover"
+          style={{ minHeight: '100%' }}
+        />
+      )
     }}
   />
 )

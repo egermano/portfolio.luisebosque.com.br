@@ -5,11 +5,15 @@ import React from 'react'
 const Header = ({ siteTitle }) => (
   <nav className="navbar is-black">
     <div className="navbar-brand">
-      <a className="navbar-item" href="https://bulma.io" style={{
-        fontFamily: 'Open Sans',
-        fontWeight: '700',
-        textTransform: 'uppercase',
-      }}>
+      <a
+        className="navbar-item"
+        href="https://bulma.io"
+        style={{
+          fontFamily: 'Open Sans',
+          fontWeight: '700',
+          textTransform: 'uppercase',
+        }}
+      >
         Luise Bosquê
       </a>
       <div

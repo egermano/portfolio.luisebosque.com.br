@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../layouts/layout'
 import SEO from '../components/seo'
 import Hero from '../sections/indexHero'
-import Portfolio from '../sections/portfolio';
+import Portfolio from '../sections/portfolio'
 
 const IndexPage = () => (
   <Layout>

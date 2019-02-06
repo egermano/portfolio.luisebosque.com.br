@@ -16,25 +16,24 @@ const Hero = () => (
       }
     `}
     render={data => (
-        <section className="hero is-medium">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title has-text-centered">
-                <Img
-                  fadeIn={true}
-                  fluid={data.placeholderImage.childImageSharp.fluid}
-                  title="Luise Bosquê"
-                  style={{
-                    maxWidth: '400px',
-                    margin: '0 auto',
-                  }}
-                />
-              </h1>
-            </div>
+      <section className="hero is-medium">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title has-text-centered">
+              <Img
+                fadeIn={true}
+                fluid={data.placeholderImage.childImageSharp.fluid}
+                title="Luise Bosquê"
+                style={{
+                  maxWidth: '400px',
+                  margin: '0 auto',
+                }}
+              />
+            </h1>
           </div>
-        </section>
-      )
-    }
+        </div>
+      </section>
+    )}
   />
 )
 export default Hero

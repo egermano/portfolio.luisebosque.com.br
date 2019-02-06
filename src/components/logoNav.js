@@ -30,9 +30,25 @@ const LogoNav = () => (
         />
         <span className="logo-text is-hidden-tablet">
           <i>
-            <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.92847 8.49916L8.44571 15.0164" stroke="black" stroke-width="2" stroke-linecap="square" />
-              <path d="M1.92847 8.49888L8.44571 1.98164" stroke="black" stroke-width="2" stroke-linecap="square" />
+            <svg
+              width="10"
+              height="17"
+              viewBox="0 0 10 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.92847 8.49916L8.44571 15.0164"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
+              <path
+                d="M1.92847 8.49888L8.44571 1.98164"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="square"
+              />
             </svg>
           </i>
           Voltar para Portfolio
@@ -42,4 +58,4 @@ const LogoNav = () => (
   />
 )
 
-export default LogoNav;
+export default LogoNav

@@ -16,32 +16,32 @@ const Hero = () => (
       }
     `}
     render={data => (
-        <section className="hero is-medium">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title has-text-centered">
-                <Img
-                  fadeIn={true}
-                  fluid={data.placeholderImage.childImageSharp.fluid}
-                  title="Luise Bosquê"
-                  style={{
-                    maxWidth: '400px',
-                    margin: '0 auto',
-                  }}
-                />
-              </h1>
-              <div className="columns">
+      <section className="hero is-medium">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title has-text-centered">
+              <Img
+                fadeIn={true}
+                fluid={data.placeholderImage.childImageSharp.fluid}
+                title="Luise Bosquê"
+                style={{
+                  maxWidth: '400px',
+                  margin: '0 auto',
+                }}
+              />
+            </h1>
+            <div className="columns">
               <div className="column is-8 is-offset-4">
-                    <p className="hero-subtitle">
-                  Desenvolvendo produtos do <strong>início ao fim</strong>. Consultoria, criação modelagem, confecção e marketing.
-                  </p>
-                  </div>
+                <p className="hero-subtitle">
+                  Desenvolvendo produtos do <strong>início ao fim</strong>.
+                  Consultoria, criação modelagem, confecção e marketing.
+                </p>
               </div>
             </div>
           </div>
-        </section>
-      )
-    }
+        </div>
+      </section>
+    )}
   />
 )
 export default Hero
